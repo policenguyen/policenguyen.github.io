@@ -872,6 +872,19 @@ h1 span {
 h2 {
   font-size: 3.2rem;
   line-height: 4.8rem; }
+  #tacgia {
+    color :yellowgreen;
+    margin-left: 200px;
+    font-size: 20px;
+  }
+  #namebaihoc {
+    color : red;
+    border: 2px  green ;
+    border-style:dashed;
+    padding: 0px ;
+    -webkit-text-stroke: 1px black;
+    border-radius: 50px 50px;
+  }
   @media (min-width: 768px) {
     h2 {
       font-size: 4.8rem;
@@ -1079,7 +1092,64 @@ h1 span {
   @media (min-width: 768px) {
     .text-landing {
       letter-spacing: 1.6rem; } }
+.titles{
+  border: 3px solid red;
+  /*border-style: dotted;*/
+  border-radius: 50px;
+  border-bottom-width: 10px;
+  min-width: 30%;
+  max-width: 30%;
+  display: inline-block;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
 
+.block {
+	position: relative;
+
+	width: 500px;
+	height: 10%;
+   border-radius: 50px;
+  min-width: 30%;
+  max-width: 40%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(100deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+  border-radius: 50px;
+  border-bottom-width: 20%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(30px);
+}
 /* -- Subtitle (Before h1, h2) p.subtitle + h1/h2 */
 .text-subtitle {
   letter-spacing: .2rem;
@@ -1452,8 +1522,8 @@ section,
   @media (min-width: 1024px) {
     section,
     .slide {
-      padding-bottom: 12rem;
-      padding-top: 12rem; } }
+      padding-bottom: 15rem;
+      /*padding-top: 12rem;*/ } }
 
 /*slide with no padding (full card, .embed youtube video...) */
 .fullscreen {
