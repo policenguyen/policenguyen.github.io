@@ -80,9 +80,29 @@
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+window.addEventListener("DOMContentLoaded",e=>{
+  const allElements = document.querySelectorAll('.sectionxd,#tennhom,#namebaihoc,#tacgia-container,.center-container');
+  allElements.forEach(function(element) {
+    element.classList.add("hidden");
+});
+let clickCount = 0;
 
+document.addEventListener("click", e => {
+    allElements.forEach(function (element) {
+        element.classList.remove("animv");
+    });
+    clickCount++;
+    const elementToReveal = allElements[clickCount - 1];
+    if (clickCount >= allElements.length) {
+       clickCount = 0;
+    }
+    if (elementToReveal) {
+        elementToReveal.classList.remove("hidden");
+        elementToReveal.classList.add("animv");
+    }
+});
 
-
+})
 var transitionEvent = '';
 var animationEvent = '';
 
@@ -1934,6 +1954,8 @@ var Navigation = function () {
     key: 'updateCounter',
     value: function updateCounter(current, max) {
       if (this.ws_.options.showIndex) {
+        window.asd = current;
+        console.log(asd)
         this.counter.childNodes[0].textContent = current + ' / ' + max;
       } else {
         this.counter.textContent = current + ' / ' + max;
