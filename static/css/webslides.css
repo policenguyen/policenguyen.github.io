@@ -93,7 +93,7 @@ strong,
 sub,
 sup,
 tt,
-var,
+url,
 b,
 u,
 i,
@@ -521,11 +521,56 @@ https://github.com/daneden/animate.css */
     opacity: 0; }
   to {
     opacity: 1; } }
-
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      height: 43vh;
+    }
+    .headshot {
+      flex-shrink: 0;
+      margin: 50px;
+      height: calc(150px + 6vw);
+      width: calc(150px + 6vw);
+      border: calc(8px + 0.2vw) solid transparent;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      background-size: cover;
+      box-sizing: border-box;
+      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    .headshot-1 {
+      border-radius: 30%;
+      background-image: url("https://file.hstatic.net/200000102237/file/hinh-anh-tre-em-vui-ve_3c40b783633e4f3381d14bedad901356_grande.jpg"), linear-gradient(#f9f047, #0fd850);
+      float: right;
+    }
+    
+    .headshot-2 {
+      border-radius: 50%;
+      background-image: url("http://vietnamese.cri.cn/mmsource/images/2014/01/14/5.jpg"), linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
+    }
+    
+    .headshot-3 {
+      border-radius: 50% 10%;
+      background-image: url("https://api.toploigiai.vn/uploads/ly-thuyet/gdcd-6/ly-thuyet-gdcd-6-bai-12-cong-uoc-lien-hop-quoc-ve-quyen-tre-em.jpg"), linear-gradient(to bottom left, #f83600, #f9d423);
+    }    
 .fadeIn {
   -webkit-animation: fadeIn 1s;
           animation: fadeIn 1s; }
-
+.pics{ max-width: 30%;
+  border-radius: 50px;
+  border: 2px solid green;}
+#pic1{
+  margin-top: -13.5rem;
+  float:left;
+}
+#pic2{
+  margin-top: -12.5rem;
+  float: right;
+}
+#pic3{
+}
 /*-- fadeInUp -- */
 @-webkit-keyframes fadeInUp {
   from {
@@ -872,10 +917,19 @@ h1 span {
 h2 {
   font-size: 3.2rem;
   line-height: 4.8rem; }
+  #tacgia-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100px;
+  }
+
   #tacgia {
-    color :yellowgreen;
-    margin-left: 200px;
+    color: yellowgreen;
+    padding: 0;
     font-size: 20px;
+    max-width: 50%;
+    text-align: center; /* Center the text within the h2 element */
   }
   #namebaihoc {
     color : red;
@@ -1730,7 +1784,7 @@ a#previous {
 
 /*===============================================================
 6. Magic blocks with flexbox (Auto-fill & Equal Height)
-Blocks Links li>a = .flexblock.blink (.blink required)
+Blocks https://file.hstatic.net/200000102237/file/hinh-anh-tre-em-vui-ve_3c40b783633e4f3381d14bedad901356_grande.jpg li>a = .flexblock.blink (.blink required)
 ================================================================= */
 .flexblock {
   clear: both;
