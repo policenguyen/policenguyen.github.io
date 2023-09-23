@@ -77,12 +77,12 @@
           - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
         -->
 
-        <section id='section1'>
+        <section id="section1">
          <span class="background" style="background-image:url('https://lh6.googleusercontent.com/Y7We8oN4Yv48kEqfYYLqY5num6RWoKANa7RXrUS5Q0Sg--0cKYd-GwfMm_PMAlzpI-xG6VlXvSZOWY6KSyZg464JJY5NzpL8iEa5DYNHooXrifXIf1v8WtrHQCJ2MTBy7seO-67msAlHKw9RTmKropRuhw=s2048')"></span>
           <!--.wrap = container (width: 90%) -->
           <div id = 'a' class="wrap aligncenter">
-            <h1 id='tennhom' style='color: yellow'><strong>Bài Trình Bày Của Tổ 3</strong></h1>
-          <h3 id = "namebaihoc" style="line-height: 1.4; font-size: 240%;"><strong>Tuyên Bố Thế Giới Về Sự Sống Còn
+            <h1 id='tennhom' class='hidden' style='color: yellow'><strong>Bài Trình Bày Của Tổ 3</strong></h1>
+          <h3 id = "namebaihoc" class="hidden" style="line-height: 1.4; font-size: 240%;"><strong>Tuyên Bố Thế Giới Về Sự Sống Còn
             <br>Quyền Được Bảo Vệ Và Phát Triển Của Trẻ Em
           </strong></h3>
           <div id="tacgia-container">
@@ -99,28 +99,17 @@
           </div>
           <!-- .end .wrap -->
         </section>
-        <section class ='sectionxd' style="background-image:url('https://lh6.googleusercontent.com/JlY6AnNcRtSWBClMqB5CqZIbGRmHz4u3-jPM28lFiRlhMX6a7WgxAM4-nMV0evhfwrKzyPFV04fgUH83tSnyv05G9-fpYl-AbRCBw44qWPx5chLe-hRf82rrG76QB0wP_G_krcDypQxYEkKEbGKfkRkYWw=s2048')">
+        <section id="section2"style="background-image:url('https://lh6.googleusercontent.com/JlY6AnNcRtSWBClMqB5CqZIbGRmHz4u3-jPM28lFiRlhMX6a7WgxAM4-nMV0evhfwrKzyPFV04fgUH83tSnyv05G9-fpYl-AbRCBw44qWPx5chLe-hRf82rrG76QB0wP_G_krcDypQxYEkKEbGKfkRkYWw=s2048')">
           <!--.wrap = container (width: 90%) -->
           <div class="wrap size-50 aligncenter">
-            <div style="background-color: black;" id="title" class="block"><h2 style = "color : red"><strong>4</strong></h2></div>
+            <div style="background-color: rgb(0, 0, 0);" id="title" class="block"><h2 style = "color : red"><strong>4</strong></h2></div>
       
             <div class="multiline" style="color: red; text-align:center; font-size: 160%; line-height:1.">
               <br><strong>Ở phần "Nhiệm vụ", bản Tuyên bố đã nêu lên khá nhiều điểm mà từng quốc gia và cả cộng đồng quốc tế cần phải nỗ lực phối hợp hành động, hãy phân tích tính chất toàn diện của nội dung phần này</strong>
               <br> 
           </div>            
-          <div class="bg-white shadow">
-              <ul class="flexblock reasons">
-                <li>
-                  <h2>An opportunity to engage.</h2>
-                  <p>WebSlides is about good karma. This is about telling the story, and sharing it in a beautiful way. HTML and CSS as narrative elements.</p>
-                </li>
-                <li>
-                  <h2>Work better, faster.</h2>
-                  <p>Designers, marketers, and journalists can now focus on the content. Simply <a href="demos/index.html" title="WebSlides Demos">choose a demo</a> and customize it in minutes.</p>
-                </li>
-              </ul>
-            </div>
-            <!-- .end .bg-white shadow -->
+          <div id="reasonss">
+            f
           </div>
           <!-- .end .wrap -->
         </section>
@@ -366,6 +355,7 @@
     </footer>  -->
 
     <!-- Required -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="static/js/webslides.js"></script>
     <script>
       window.ws = new WebSlides();
