@@ -541,7 +541,7 @@ https://github.com/daneden/animate.css */
       box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
     }
     .multiline {
-      margin-bottom: 20px;
+      margin-bottom: 50px;
       margin-top: 20px;
       background-color: transparent;
       backdrop-filter: blur(10px);
@@ -551,7 +551,7 @@ https://github.com/daneden/animate.css */
       position: relative;
       left: 50%;
       transform: translateX(-50%);
-     padding: 2rem 1rem;
+      padding: 2rem 1rem;
      animation-play-state: paused;
       animation: shrinkHeight 3s linear forwards;
     }
@@ -583,7 +583,35 @@ https://github.com/daneden/animate.css */
         transparent 20px
       ) 20/1rem;
     }
+    .heading {
+      animation-play-state: paused;
+      font-size: 10vw;
+      text-shadow: 4px 4px 0px #3F7FBF;
+      mix-blend-mode: screen;
+      animation: fadeIn 1s linear forwards;
+    }
     
+    @keyframes fadeIn {
+        0% {
+            opacity: 0
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    #reasonss{
+    animation-play-state: paused;
+      color:rgb(23, 255, 158);
+      margin-bottom: 20px;
+      margin-top: 20px;
+      font-size: 160%;
+      width: 140%;
+     position: relative;
+     left: 50%;
+     transform: translateX(-50%);
+    padding: 2rem 1rem;
+    }
     .headshot-1 {
       border-radius: 30%;
       background-image: url("https://file.hstatic.net/200000102237/file/hinh-anh-tre-em-vui-ve_3c40b783633e4f3381d14bedad901356_grande.jpg"), linear-gradient(#f9f047, #0fd850);
