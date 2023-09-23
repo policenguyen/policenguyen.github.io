@@ -117,7 +117,7 @@ document.addEventListener("click",  e => {
             countsame = asd;
             clickCount = 0;
           }
-          const Elementsv = document.querySelectorAll('.multiline,#title,#reasonss,#section2');
+          const Elementsv = document.querySelectorAll('.multiline,#title,#reasonss,.heading,#section2');
           urmom(Elementsv)
           break;
   }
