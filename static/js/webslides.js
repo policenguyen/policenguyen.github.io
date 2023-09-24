@@ -80,9 +80,11 @@
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 window.addEventListener("DOMContentLoaded",e=>{
-  const allElements = document.querySelectorAll('.sectionxd,.multiline,#reasonss,#title,#tennhom,#namebaihoc,#tacgia-container,.center-container');
+  let asdd = 0;
+  const allElements = document.querySelectorAll('.sectionxd,.multiline,#reasonss,#title,#tennhom,#namebaihoc,#tacgia-container,.center-container,.lis,.block');
   allElements.forEach(function(element) {
     element.classList.add("hidden");
+
 });
 let clickCount = 0;
 var countsame;
@@ -97,6 +99,34 @@ if (clickCount >= e.length) {
 }
 if (elementToReveal) {
     elementToReveal.classList.remove("hidden");
+    elementToReveal.style.animationPlayState = 'running'
+    elementToReveal.classList.add("animv");
+}
+}
+var img = document.createElement("img");
+img.src = "https://media.hasaki.vn/wysiwyg/MinhPhuong/tang-can-2.jpg";
+function urmom1(e){
+  e.forEach(function (element) {
+    element.classList.remove("animv");
+});
+clickCount++;
+const elementToReveal = e[clickCount - 1];
+if (clickCount >= e.length) {
+const a = document.querySelectorAll('.multiline,#title,#reasonss,.heading,#section2');
+}
+if (elementToReveal) {
+    elementToReveal.classList.remove("hidden");
+    if(clickCount >=3){
+      asdd+=1;
+      var xd = document.querySelectorAll(".xda")[clickCount-3];
+      xd.classList.add("hidden")
+      if(asdd=== 1)$(".lis")[0].appendChild(img.cloneNode(true));
+      elementToReveal.appendChild(img.cloneNode(true));
+      console.log(asdd)
+          if(asdd > 4){
+            document.getElementById("col").style.display = 'none'
+          }
+        }
     elementToReveal.style.animationPlayState = 'running'
     elementToReveal.classList.add("animv");
 }
@@ -121,6 +151,16 @@ document.addEventListener("click",  e => {
           urmom(Elementsv)
           break;
   }
+  case 3:
+    if(asd === 3){
+      if(countsame !== asd){
+        countsame = asd;
+        clickCount = 0;
+      }
+      const Elementsv1 = document.querySelectorAll('.block,.lis');
+      urmom1(Elementsv1)
+    break;
+    }
 }});
 
 })
